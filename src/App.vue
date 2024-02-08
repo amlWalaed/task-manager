@@ -5,7 +5,13 @@
 <template>
    <AppLayout>
       <div class="container">
-         aml waled
+         <div>
+            <template v-for="i in 4">
+               <section>
+
+               </section>
+            </template>
+         </div>
       </div>
    </AppLayout>
 </template>
