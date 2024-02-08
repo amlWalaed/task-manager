@@ -3,6 +3,7 @@ import iconsPlugin from "./src/plugins/tw-icons-plugins";
 import colors from "tailwindcss/colors";
 /** @type {import('tailwindcss').Config} */
 export default {
+   darkMode:'class',
    content: [
      "./index.html",
      "./src/**/*.{vue,js,ts,jsx,tsx}",

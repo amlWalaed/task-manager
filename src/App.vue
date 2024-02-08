@@ -6,11 +6,10 @@
    <AppLayout>
       <div class="container">
          <div>
-            <template v-for="i in 4">
-               <section>
+            <section>
+               <TaskContainer />
+            </section>
 
-               </section>
-            </template>
          </div>
       </div>
    </AppLayout>

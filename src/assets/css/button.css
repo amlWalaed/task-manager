@@ -1,0 +1,519 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components{
+      .btn-primary {
+          --btn-solid-forground: theme(colors.white);
+          --btn-solid-bg: theme(colors.primary.DEFAULT);
+          --btn-solid-bg-hover: theme(colors.primary.900);
+          --btn-solid-bg-active: theme(colors.primary.950);
+  
+          --btn-link-bg: var(--btn-solid-bg);
+          --btn-link-bg-hover: var(--btn-solid-bg-hover);
+          --btn-link-bg-active: var(--btn-solid-bg-active);
+          --btn-link-forground: var(--btn-link-bg);
+  
+          --btn-outline-forground: theme(colors.primary.DEFAULT);
+          --btn-outline-bg: theme(colors.primary.200);
+          --btn-outline-bg-hover: theme(colors.primary.50);
+          --btn-outline-bg-active: theme(colors.primary.100);
+  
+          --btn-ghost-forground: var(--btn-outline-forground);
+          --btn-ghost-bg: var(--btn-outline-bg);
+          --btn-ghost-bg-hover: var(--btn-outline-bg-hover);
+          --btn-ghost-bg-active: var(--btn-outline-bg-active);
+  
+          --btn-soft-forground: var(--btn-outline-forground);
+          --btn-soft-bg: theme(colors.primary.50);
+          --btn-soft-bg-hover: theme(colors.primary.100);
+          --btn-soft-bg-active: theme(colors.primary.200);
+  
+          --btn-gradient-forground: theme(colors.white);
+          --btn-gradient-from: theme(colors.primary.500);
+          --btn-gradient-to: theme(colors.primary.300);
+      }
+  
+      :is(.dark.btn-primary, .dark .btn-primary) {
+          --btn-solid-bg: theme(colors.primary.600);
+          --btn-solid-bg-hover: theme(colors.primary.500);
+          --btn-solid-bg-active: theme(colors.primary.700);
+  
+          --btn-outline-bg: theme(colors.primary.950);
+          --btn-outline-bg-hover: theme(colors.primary.950);
+          --btn-outline-bg-active: theme(colors.primary.900);
+  
+          --btn-soft-bg: theme(colors.primary.950);
+          --btn-soft-bg-hover: theme(colors.primary.900);
+          --btn-soft-bg-active: theme(colors.primary.950);
+  
+          --btn-gradient-from: theme(colors.primary.700);
+          --btn-gradient-to: theme(colors.primary.500);
+      }
+  
+      .btn-secondary {
+          --btn-solid-bg: theme(colors.secondary.500);
+          --btn-solid-bg-hover: theme(colors.secondary.600);
+          --btn-solid-bg-active: theme(colors.secondary.700);
+          --btn-solid-forground: theme(colors.white);
+  
+          --btn-link-bg: var(--btn-solid-bg);
+          --btn-link-bg-hover: var(--btn-solid-bg-hover);
+          --btn-link-bg-active: var(--btn-solid-bg-active);
+          --btn-link-forground: var(--btn-link-bg);
+  
+          --btn-outline-bg: theme(colors.secondary.200);
+          --btn-outline-bg-hover: theme(colors.secondary.50);
+          --btn-outline-bg-active: theme(colors.secondary.100);
+          --btn-outline-forground: theme(colors.secondary.500);
+  
+          --btn-ghost-bg: var(--btn-outline-bg);
+          --btn-ghost-bg-hover: var(--btn-outline-bg-hover);
+          --btn-ghost-bg-active: var(--btn-outline-bg-active);
+          --btn-ghost-forground: var(--btn-outline-forground);
+  
+          --btn-soft-bg: theme(colors.secondary.50);
+          --btn-soft-bg-hover: theme(colors.secondary.100);
+          --btn-soft-bg-active: theme(colors.secondary.200);
+          --btn-soft-forground: var(--btn-outline-forground);
+  
+          --btn-gradient-from: theme(colors.secondary.500);
+          --btn-gradient-to: theme(colors.secondary.300);
+          --btn-gradient-forground: theme(colors.white);
+      }
+  
+      :is(.dark.btn-secondary, .dark .btn-secondary) {
+          --btn-solid-bg: theme(colors.secondary.600);
+          --btn-solid-bg-hover: theme(colors.secondary.500);
+          --btn-solid-bg-active: theme(colors.secondary.700);
+  
+          --btn-outline-bg: theme(colors.secondary.950);
+          --btn-outline-bg-hover: theme(colors.secondary.950);
+          --btn-outline-bg-active: theme(colors.secondary.900);
+  
+          --btn-soft-bg: theme(colors.secondary.950);
+          --btn-soft-bg-hover: theme(colors.secondary.900);
+          --btn-soft-bg-active: theme(colors.secondary.950);
+  
+          --btn-gradient-from: theme(colors.secondary.700);
+          --btn-gradient-to: theme(colors.secondary.500);
+      }
+  
+      .btn-accent {
+          --btn-solid-bg: theme(colors.accent.500);
+          --btn-solid-bg-hover: theme(colors.accent.600);
+          --btn-solid-bg-active: theme(colors.accent.700);
+          --btn-solid-forground: theme(colors.white);
+  
+          --btn-link-bg: var(--btn-solid-bg);
+          --btn-link-bg-hover: var(--btn-solid-bg-hover);
+          --btn-link-bg-active: var(--btn-solid-bg-active);
+          --btn-link-forground: var(--btn-link-bg);
+  
+          --btn-outline-bg: theme(colors.accent.200);
+          --btn-outline-bg-hover: theme(colors.accent.100);
+          --btn-outline-bg-active: theme(colors.accent.200);
+          --btn-outline-forground: theme(colors.accent.500);
+  
+          --btn-ghost-bg: var(--btn-outline-bg);
+          --btn-ghost-bg-hover: var(--btn-outline-bg-hover);
+          --btn-ghost-bg-active: var(--btn-outline-bg-active);
+          --btn-ghost-forground: var(--btn-outline-forground);
+  
+          --btn-soft-bg: theme(colors.accent.50);
+          --btn-soft-bg-hover: theme(colors.accent.100);
+          --btn-soft-bg-active: theme(colors.accent.200);
+          --btn-soft-forground: var(--btn-outline-forground);
+  
+          --btn-gradient-from: theme(colors.accent.500);
+          --btn-gradient-to: theme(colors.accent.300);
+          --btn-gradient-forground: theme(colors.white);
+      }
+  
+      :is(.dark.btn-accent, .dark .btn-accent) {
+          --btn-solid-bg: theme(colors.accent.600);
+          --btn-solid-bg-hover: theme(colors.accent.500);
+          --btn-solid-bg-active: theme(colors.accent.700);
+  
+          --btn-outline-bg: theme(colors.accent.950);
+          --btn-outline-bg-hover: theme(colors.accent.950);
+          --btn-outline-bg-active: theme(colors.accent.900);
+  
+          --btn-soft-bg: theme(colors.accent.950);
+          --btn-soft-bg-hover: theme(colors.accent.900);
+          --btn-soft-bg-active: theme(colors.accent.950);
+  
+          --btn-gradient-from: theme(colors.accent.700);
+          --btn-gradient-to: theme(colors.accent.500);
+      }
+  
+      .btn-success {
+          --btn-solid-bg: theme(colors.success.500);
+          --btn-solid-bg-hover: theme(colors.success.600);
+          --btn-solid-bg-active: theme(colors.success.700);
+          --btn-solid-forground: theme(colors.white);
+  
+          --btn-link-bg: var(--btn-solid-bg);
+          --btn-link-bg-hover: var(--btn-solid-bg-hover);
+          --btn-link-bg-active: var(--btn-solid-bg-active);
+          --btn-link-forground: var(--btn-link-bg);
+  
+          --btn-outline-bg: theme(colors.success.200);
+          --btn-outline-bg-hover: theme(colors.success.100);
+          --btn-outline-bg-active: theme(colors.success.200);
+          --btn-outline-forground: theme(colors.success.500);
+  
+          --btn-ghost-bg: var(--btn-outline-bg);
+          --btn-ghost-bg-hover: var(--btn-outline-bg-hover);
+          --btn-ghost-bg-active: var(--btn-outline-bg-active);
+          --btn-ghost-forground: var(--btn-outline-forground);
+  
+          --btn-soft-bg: theme(colors.success.50);
+          --btn-soft-bg-hover: theme(colors.success.100);
+          --btn-soft-bg-active: theme(colors.success.200);
+          --btn-soft-forground: var(--btn-outline-forground);
+  
+          --btn-gradient-from: theme(colors.success.500);
+          --btn-gradient-to: theme(colors.success.300);
+          --btn-gradient-forground: theme(colors.white);
+      }
+  
+      :is(.dark.btn-success, .dark .btn-success) {
+          --btn-solid-bg: theme(colors.success.600);
+          --btn-solid-bg-hover: theme(colors.success.500);
+          --btn-solid-bg-active: theme(colors.success.700);
+  
+          --btn-outline-bg: theme(colors.success.950);
+          --btn-outline-bg-hover: theme(colors.success.950);
+          --btn-outline-bg-active: theme(colors.success.900);
+  
+          --btn-soft-bg: theme(colors.success.950);
+          --btn-soft-bg-hover: theme(colors.success.900);
+          --btn-soft-bg-active: theme(colors.success.950);
+  
+          --btn-gradient-from: theme(colors.success.700);
+          --btn-gradient-to: theme(colors.success.500);
+      }
+      .btn-danger {
+          --btn-solid-bg: theme(colors.danger.500);
+          --btn-solid-bg-hover: theme(colors.danger.600);
+          --btn-solid-bg-active: theme(colors.danger.700);
+          --btn-solid-forground: theme(colors.white);
+  
+          --btn-link-bg: var(--btn-solid-bg);
+          --btn-link-bg-hover: var(--btn-solid-bg-hover);
+          --btn-link-bg-active: var(--btn-solid-bg-active);
+          --btn-link-forground: var(--btn-link-bg);
+  
+          --btn-outline-bg: theme(colors.danger.200);
+          --btn-outline-bg-hover: theme(colors.danger.100);
+          --btn-outline-bg-active: theme(colors.danger.200);
+          --btn-outline-forground: theme(colors.danger.500);
+  
+          --btn-ghost-bg: var(--btn-outline-bg);
+          --btn-ghost-bg-hover: var(--btn-outline-bg-hover);
+          --btn-ghost-bg-active: var(--btn-outline-bg-active);
+          --btn-ghost-forground: var(--btn-outline-forground);
+  
+          --btn-soft-bg: theme(colors.danger.50);
+          --btn-soft-bg-hover: theme(colors.danger.100);
+          --btn-soft-bg-active: theme(colors.danger.200);
+          --btn-soft-forground: var(--btn-outline-forground);
+  
+          --btn-gradient-from: theme(colors.danger.500);
+          --btn-gradient-to: theme(colors.danger.300);
+          --btn-gradient-forground: theme(colors.white);
+      }
+  
+      :is(.dark.btn-danger, .dark .btn-danger) {
+          --btn-solid-bg: theme(colors.danger.600);
+          --btn-solid-bg-hover: theme(colors.danger.500);
+          --btn-solid-bg-active: theme(colors.danger.700);
+  
+          --btn-outline-bg: theme(colors.danger.950);
+          --btn-outline-bg-hover: theme(colors.danger.950);
+          --btn-outline-bg-active: theme(colors.danger.900);
+  
+          --btn-soft-bg: theme(colors.danger.950);
+          --btn-soft-bg-hover: theme(colors.danger.900);
+          --btn-soft-bg-active: theme(colors.danger.950);
+  
+          --btn-gradient-from: theme(colors.danger.700);
+          --btn-gradient-to: theme(colors.danger.500);
+      }
+  
+      .btn-warning {
+          --btn-solid-bg: theme(colors.warning.500);
+          --btn-solid-bg-hover: theme(colors.warning.600);
+          --btn-solid-bg-active: theme(colors.warning.700);
+          --btn-solid-forground: theme(colors.white);
+  
+          --btn-link-bg: var(--btn-solid-bg);
+          --btn-link-bg-hover: var(--btn-solid-bg-hover);
+          --btn-link-bg-active: var(--btn-solid-bg-active);
+          --btn-link-forground: var(--btn-link-bg);
+  
+          --btn-outline-bg: theme(colors.warning.200);
+          --btn-outline-bg-hover: theme(colors.warning.100);
+          --btn-outline-bg-active: theme(colors.warning.200);
+          --btn-outline-forground: theme(colors.warning.500);
+  
+          --btn-ghost-bg: var(--btn-outline-bg);
+          --btn-ghost-bg-hover: var(--btn-outline-bg-hover);
+          --btn-ghost-bg-active: var(--btn-outline-bg-active);
+          --btn-ghost-forground: var(--btn-outline-forground);
+  
+          --btn-soft-bg: theme(colors.warning.50);
+          --btn-soft-bg-hover: theme(colors.warning.100);
+          --btn-soft-bg-active: theme(colors.warning.200);
+          --btn-soft-forground: var(--btn-outline-forground);
+  
+          --btn-gradient-from: theme(colors.warning.500);
+          --btn-gradient-to: theme(colors.warning.300);
+          --btn-gradient-forground: theme(colors.white);
+      }
+  
+      :is(.dark.btn-warning, .dark .btn-warning) {
+          --btn-solid-bg: theme(colors.warning.600);
+          --btn-solid-bg-hover: theme(colors.warning.500);
+          --btn-solid-bg-active: theme(colors.warning.700);
+  
+          --btn-outline-bg: theme(colors.warning.950);
+          --btn-outline-bg-hover: theme(colors.warning.950);
+          --btn-outline-bg-active: theme(colors.warning.900);
+  
+          --btn-soft-bg: theme(colors.warning.950);
+          --btn-soft-bg-hover: theme(colors.warning.900);
+          --btn-soft-bg-active: theme(colors.warning.950);
+  
+          --btn-gradient-from: theme(colors.warning.700);
+          --btn-gradient-to: theme(colors.warning.500);
+      }
+  
+      .btn-info {
+          --btn-solid-bg: theme(colors.info.500);
+          --btn-solid-bg-hover: theme(colors.info.600);
+          --btn-solid-bg-active: theme(colors.info.700);
+          --btn-solid-forground: theme(colors.white);
+  
+          --btn-link-bg: var(--btn-solid-bg);
+          --btn-link-bg-hover: var(--btn-solid-bg-hover);
+          --btn-link-bg-active: var(--btn-solid-bg-active);
+          --btn-link-forground: var(--btn-link-bg);
+  
+          --btn-outline-bg: theme(colors.info.200);
+          --btn-outline-bg-hover: theme(colors.info.100);
+          --btn-outline-bg-active: theme(colors.info.200);
+          --btn-outline-forground: theme(colors.info.500);
+  
+          --btn-ghost-bg: var(--btn-outline-bg);
+          --btn-ghost-bg-hover: var(--btn-outline-bg-hover);
+          --btn-ghost-bg-active: var(--btn-outline-bg-active);
+          --btn-ghost-forground: var(--btn-outline-forground);
+  
+          --btn-soft-bg: theme(colors.info.50);
+          --btn-soft-bg-hover: theme(colors.info.100);
+          --btn-soft-bg-active: theme(colors.info.200);
+          --btn-soft-forground: var(--btn-outline-forground);
+  
+          --btn-gradient-from: theme(colors.info.500);
+          --btn-gradient-to: theme(colors.info.300);
+          --btn-gradient-forground: theme(colors.white);
+      }
+  
+      :is(.dark.btn-info, .dark .btn-info) {
+          --btn-solid-bg: theme(colors.info.600);
+          --btn-solid-bg-hover: theme(colors.info.500);
+          --btn-solid-bg-active: theme(colors.info.700);
+  
+          --btn-outline-bg: theme(colors.info.950);
+          --btn-outline-bg-hover: theme(colors.info.950);
+          --btn-outline-bg-active: theme(colors.info.900);
+  
+          --btn-soft-bg: theme(colors.info.950);
+          --btn-soft-bg-hover: theme(colors.info.900);
+          --btn-soft-bg-active: theme(colors.info.950);
+  
+          --btn-gradient-from: theme(colors.info.700);
+          --btn-gradient-to: theme(colors.info.500);
+      }
+      .btn-neutral {
+          --btn-solid-bg: theme(colors.neutral.500);
+          --btn-solid-bg-hover: theme(colors.neutral.600);
+          --btn-solid-bg-active: theme(colors.neutral.700);
+          --btn-solid-forground: theme(colors.white);
+  
+          --btn-link-bg: var(--btn-solid-bg);
+          --btn-link-bg-hover: var(--btn-solid-bg-hover);
+          --btn-link-bg-active: var(--btn-solid-bg-active);
+          --btn-link-forground: var(--btn-link-bg);
+  
+          --btn-outline-bg: theme(colors.neutral.200);
+          --btn-outline-bg-hover: theme(colors.neutral.100);
+          --btn-outline-bg-active: theme(colors.neutral.200);
+          --btn-outline-forground: theme(colors.neutral.500);
+  
+          --btn-ghost-bg: var(--btn-outline-bg);
+          --btn-ghost-bg-hover: var(--btn-outline-bg-hover);
+          --btn-ghost-bg-active: var(--btn-outline-bg-active);
+          --btn-ghost-forground: var(--btn-outline-forground);
+  
+          --btn-soft-bg: theme(colors.neutral.50);
+          --btn-soft-bg-hover: theme(colors.neutral.100);
+          --btn-soft-bg-active: theme(colors.neutral.200);
+          --btn-soft-forground: var(--btn-outline-forground);
+  
+          --btn-gradient-from: theme(colors.neutral.500);
+          --btn-gradient-to: theme(colors.neutral.300);
+          --btn-gradient-forground: theme(colors.white);
+      }
+  
+      :is(.dark.btn-neutral, .dark .btn-neutral) {
+          --btn-solid-bg: theme(colors.neutral.600);
+          --btn-solid-bg-hover: theme(colors.neutral.500);
+          --btn-solid-bg-active: theme(colors.neutral.700);
+  
+          --btn-outline-bg: theme(colors.neutral.950);
+          --btn-outline-bg-hover: theme(colors.neutral.950);
+          --btn-outline-bg-active: theme(colors.neutral.900);
+  
+          --btn-soft-bg: theme(colors.neutral.950);
+          --btn-soft-bg-hover: theme(colors.neutral.900);
+          --btn-soft-bg-active: theme(colors.neutral.950);
+  
+          --btn-gradient-from: theme(colors.neutral.700);
+          --btn-gradient-to: theme(colors.neutral.500);
+      }
+      /* ------------------- style for each variant individually ------------------ */
+  
+      /* ---------------------------------- solid --------------------------------- */
+  
+      /* ------------------------------- link style ------------------------------- */
+  
+      /* ------------------------------- solid link ------------------------------- */
+      .btn-solid {
+          --btn-bg-color: var(--btn-solid-bg);
+          --btn-bg-hover-color: var(--btn-solid-bg-hover);
+          --btn-bg-active-color: var(--btn-solid-bg-active);
+          --btn-text-color: var(--btn-solid-forground);
+      }
+      .btn-link {
+          --btn-bg-color: var(--btn-link-bg);
+          --btn-bg-hover-color: var(--btn-link-bg-hover);
+          --btn-bg-active-color: var(--btn-link-bg-active);
+          --btn-text-color: var(--btn-link-forground);
+      }
+      .btn-ghost {
+          --btn-bg-color: var(--btn-ghost-bg);
+          --btn-bg-hover-color: var(--btn-ghost-bg-hover);
+          --btn-bg-active-color: var(--btn-ghost-bg-active);
+          --btn-text-color: var(--btn-ghost-forground);
+      }
+      .btn-outline {
+          --btn-bg-color: var(--btn-outline-bg);
+          --btn-bg-hover-color: var(--btn-outline-bg-hover);
+          --btn-bg-active-color: var(--btn-outline-bg-active);
+          --btn-text-color: var(--btn-outline-forground);
+      }
+      .btn-soft {
+          --btn-bg-color: var(--btn-soft-bg);
+          --btn-bg-hover-color: var(--btn-soft-bg-hover);
+          --btn-bg-active-color: var(--btn-soft-bg-active);
+          --btn-text-color: var(--btn-soft-forground);
+      }
+      .btn-gradient {
+          --btn-gr-from-color: var(--btn-gradient-from);
+          --btn-gr-to-color: var(--btn-gradient-to);
+          --btn-text-color: var(--btn-gradient-forground);
+          --btn-bg-color: var(--btn-solid-bg);
+      }
+  
+      /* -------------------------------------------------------------------------- */
+      /*                                   styles                                   */
+      /* -------------------------------------------------------------------------- */
+      .btn {
+          @apply relative inline-flex items-center justify-center gap-2 font-medium capitalize transition-all focus-visible:ring focus-visible:outline-none;
+      }
+  
+      /* button size */
+      .btn-2xs {
+          @apply px-2 py-1 text-xs;
+      }
+      .btn-xs {
+          @apply px-4 py-2 text-xs;
+      }
+      .btn-sm {
+          @apply px-4 py-2 text-sm;
+      }
+      .btn-sm:where(.btn-gradient) {
+          @apply text-sm px-5 py-2.5;
+      }
+  
+      .btn-base {
+          @apply px-4 py-2 text-base;
+      }
+      .btn-lg {
+          @apply px-5 py-1 text-lg;
+      }
+      .btn-xl {
+          @apply px-5 py-1 text-xl;
+      }
+      /* ----------------------- basic class for each style ----------------------- */
+      .btn-solid {
+          @apply shadow bg-[--btn-bg-color] border-2 border-[--btn-bg-color] text-[--btn-text-color];
+      }
+      .btn-outline {
+          @apply border-2 border-[--btn-text-color] text-[--btn-text-color];
+      }
+      .btn-ghost {
+          @apply text-[--btn-text-color];
+      }
+      .btn-soft {
+          @apply text-[--btn-text-color] bg-[--btn-bg-color];
+      }
+      .btn-link {
+          @apply text-[--btn-text-color] p-0;
+      }
+      .btn-gradient {
+          @apply bg-gradient-to-t from-[--btn-gr-from-color] to-[--btn-gr-to-color] border-none from-50% text-[--btn-text-color] bg-[length:auto_200%] transition-all duration-200;
+      }
+      /* ------------- apply classes for button state  ------------ */
+      :is(.btn-solid, .btn-outline, .btn-ghost, .btn-soft):where(
+              :not(.btn-disabled):not(.btn-loading)
+          ):where(button, a) {
+          @apply active:bg-[--btn-bg-active-color] hover:bg-[--btn-bg-hover-color];
+      }
+      .btn-solid:where(:not(.btn-disabled):not(.btn-loading)):where(button, a) {
+          @apply hover:border-[--btn-bg-hover-color] active:border-[--btn-bg-active-color];
+      }
+      .btn-gradient:where(:not(.btn-disabled):not(.btn-loading)):where(
+              button,
+              a
+          ) {
+          @apply hover:bg-[center_30%] active:bg-[center_5%];
+      }
+      .btn-link:where(:not(.btn-disabled):not(.btn-loading)):where(button, a) {
+          @apply hover:underline active:text-[--btn-bg-active-color] hover:text-[--btn-bg-hover-color];
+      }
+      /* -------------------------- end apply styles end -------------------------- */
+  
+      /* --------------------------- handle focus state --------------------------- */
+      :is(.btn-solid, .btn-soft, .btn-gradient) {
+          @apply ring-offset-1 focus-visible:ring-[--btn-bg-color] dark:focus-visible:ring-offset-[--btn-bg-active-color];
+      }
+      :is(.btn-outline, .btn-ghost, .btn-link) {
+          @apply ring-offset-1 focus-visible:ring-[--btn-text-color] dark:focus-visible:ring-offset-[--btn-bg-active-color];
+      }
+      /* ----------------------------------end---------------------------------------- */
+  
+      /* roundness classes */
+      .btn-circle {
+          @apply rounded-full aspect-square;
+      }
+      /* disabled state */
+      .btn-disabled {
+          @apply cursor-not-allowed contrast-[0.85] opacity-95 brightness-[0.95];
+      }
+      .btn-loading {
+          @apply cursor-progress;
+      }
+}

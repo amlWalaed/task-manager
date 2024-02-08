@@ -1,0 +1,23 @@
+{
+	"extends": "@vue/tsconfig/tsconfig.dom.json",
+	"include": [
+		"**/*.d.ts",
+		"src/**/*",
+		"src/**/*.vue",
+		"./auto-imports.d.ts",
+		"./components.d.ts"
+	],
+	"compilerOptions": {
+		"moduleResolution": "Bundler",
+		"composite": true,
+		"baseUrl": ".",
+		"allowJs": true,
+		"outDir": "./dist",
+		"checkJs": false,
+		"types": ["vite/client"],
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"isolatedModules": true
+	}
+}
