@@ -5,5 +5,6 @@
    <section class="max-w-sm px-2 mx-auto">
 
       <TaskList />
+      <TaskForm />
    </section>
 </template>
