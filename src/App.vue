@@ -5,12 +5,7 @@
 <template>
    <AppLayout>
       <div class="container">
-         <div>
-            <section>
-               <ListContainer />
-            </section>
-
-         </div>
+         <ListContainer />
       </div>
    </AppLayout>
 </template>

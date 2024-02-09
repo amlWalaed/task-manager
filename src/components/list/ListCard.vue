@@ -23,7 +23,7 @@ const taskStore = useTaskStore()
       </header>
       <TaskForm :list="list" />
       <draggable group="tasks"
-                 class="py-2 space-y-2 overflow-y-auto h-80 hideScrollbar"
+                 class="h-full py-2 space-y-2 overflow-y-auto hideScrollbar"
                  ghost-class="opacity-40"
                  :list="list.items"
                  itemKey=".id"
